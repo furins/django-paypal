@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from urllib import unquote_plus
 import urllib2
+import locale
 from django.db import models
 from django.conf import settings
 from django.http import QueryDict
@@ -80,7 +81,11 @@ class PayPalPDT(PayPalStandardBase):
         qd.update(response_dict)
         qd.update(dict(ipaddress=self.ipaddress, st=self.st, flag_info=self.flag_info))
         pdt_form = PayPalPDTForm(qd, instance=self)
+        
+        #patch (paypal returns dates in english format)
+        locale.setlocale(locale.LC_ALL, ('en_US', 'UTF-8'))
         pdt_form.save(commit=False)
+        locale.setlocale(locale.LC_ALL, (settings.LANGUAGE_CODE, 'UTF-8'))
         
     def send_signals(self):
         # Send the PDT signals...
