@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% block content %}
-{% get_current_language as LANGUAGE_CODE %}
-lang: {{ LANGUAGE_CODE }}
 {% ifequal pdt_obj.st 'SUCCESS' %}
 <h1>{% trans 'Transaction complete' %}</h1>
 <p>{% trans 'Thank you for your payment'%}</p>

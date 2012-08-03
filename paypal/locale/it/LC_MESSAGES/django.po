@@ -997,7 +997,7 @@ msgstr "Email del cliente"
 
 #: standard/pdt/templates/pdt/pdt.html:13
 msgid "Amount"
-msgstr "Importox"
+msgstr "Importo"
 
 #: standard/pdt/templates/pdt/pdt.html:14
 msgid "Reference"
