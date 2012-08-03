@@ -985,7 +985,7 @@ msgstr "Grazie per il suo pagamento"
 
 #: standard/pdt/templates/pdt/pdt.html:7
 msgid "Please print this page for your records"
-msgstr "Stampa questa pagina"
+msgstr "Stampa questa pagina per tenere traccia dei tuoi acquisti"
 
 #: standard/pdt/templates/pdt/pdt.html:11
 msgid "Payer"
